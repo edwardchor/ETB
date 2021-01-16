@@ -1,0 +1,5 @@
+__version__ = "0.0.1"
+__description__ = "Edward's Tool Box"
+__uri__ = "Edward"
+__author__ = "Edward"
+__email__ = "zhyao.chu@gmail.com"
