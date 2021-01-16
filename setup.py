@@ -5,7 +5,6 @@ import re
 from setuptools import find_packages
 from setuptools import setup
 
-
 HERE = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -60,7 +59,6 @@ CLASSIFIERS = [
     "Programming Language :: Python :: Implementation :: CPython",
 ]
 META_FILE = read(META_PATH)
-SCRIPTS = ["src/edwards_tool_box/scripts/cli"]
 
 setup(
     name=NAME,
@@ -78,5 +76,9 @@ setup(
     zip_safe=False,
     install_requires=read_requirements("requirements.txt"),
     test_suite="tests",
-    scripts=SCRIPTS
+    entry_points={
+        'console_scripts': [
+            "mytool = edwards_tool_box.cli:main"
+        ],
+    }
 )
